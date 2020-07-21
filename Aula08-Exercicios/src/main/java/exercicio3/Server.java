@@ -98,7 +98,7 @@ public class Server {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		//alterado essa parte
+
 		new Server(1052).iniciar();;
 	}
 }

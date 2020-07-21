@@ -95,7 +95,7 @@ public class Client {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		//alterado essa parte
+		
 		new Client("localhost", 1052).iniciar();
 	}
 }
