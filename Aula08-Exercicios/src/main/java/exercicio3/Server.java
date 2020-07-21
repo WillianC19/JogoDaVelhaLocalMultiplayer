@@ -94,14 +94,11 @@ public class Server {
 	}
 	
 	private void sendAll(String msg) {
-		for(Jogador jogador : jogadores) {
-			jogador.send(msg);
-		}
+		jogadores.stream().forEach(e -> e.send(msg));
 	}
 	
 	public static void main(String[] args) throws Exception {
-		
-		Server server = new Server(1052);
-		server.iniciar();
+		//alterado essa parte
+		new Server(1052).iniciar();;
 	}
 }

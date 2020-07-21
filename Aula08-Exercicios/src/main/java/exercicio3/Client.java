@@ -8,7 +8,6 @@ import java.net.Socket;
 
 
 public class Client {
-	
 	private String host;
 	private int port;
 
@@ -65,12 +64,11 @@ public class Client {
 	}
 	
 	private void imprimirTabuleiro(String matrizStr) {
-		String[] tokens = matrizStr.split(",");
 		
 		char[][] matriz = new char[3][3];
 		int i = 0;
 		int j = 0;
-		for (String token : tokens) {
+		for (String token : matrizStr.split(",")) {
 			matriz[i][j] = token.charAt(0);
 			j++;
 			
@@ -97,8 +95,7 @@ public class Client {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		
-		Client client = new Client("localhost", 1052);
-		client.iniciar();
+		//alterado essa parte
+		new Client("localhost", 1052).iniciar();
 	}
 }
